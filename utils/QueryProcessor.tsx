@@ -16,11 +16,11 @@ export default function QueryProcessor(query: string): string {
   }
 
   if (query.toLowerCase().includes("what is")) {
-    const words = query.split(" ");
-    const num1 = parseInt(words[2]);  // Extract first number
-    const num2 = parseInt(words[4]);  // Extract second number
-    const num3 = num1 + num2;
-    return "${num3}";
+    let words = query.split(" ");
+    let num1 = parseInt(words[2]);  // Extract first number
+    let num2 = parseInt(words[4]);  // Extract second number
+    let num3 = num1 + num2;
+    return (num3.toString());
   }
 
   if (query.toLowerCase().includes("67 plus 62")) {
