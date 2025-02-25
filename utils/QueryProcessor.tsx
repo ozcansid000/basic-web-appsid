@@ -15,11 +15,19 @@ export default function QueryProcessor(query: string): string {
     return "74";
   }
 
-  if (query.toLowerCase().includes("what is")) {
+  if (query.toLowerCase().includes("plus")) {
     let words = query.split(" ");
     let num1 = parseInt(words[2]); 
     let num2 = parseInt(words[4]);  
     let num3 = num1 + num2;
+    return (num3.toString());
+  }
+
+  if (query.toLowerCase().includes("minus")) {
+    let words = query.split(" ");
+    let num1 = parseInt(words[2]); 
+    let num2 = parseInt(words[4]);  
+    let num3 = num1 - num2;
     return (num3.toString());
   }
 
